@@ -1,0 +1,82 @@
+import type { Level, Question } from '../types';
+
+const q = (
+  word: string,
+  wordPinyin: string,
+  fullWord: string,
+  fullPinyin: string,
+  parts: string[],
+  fruit: string,
+  layout: 'horizontal' | 'vertical',
+  fruitEmoji?: string,
+): Question => ({ word, wordPinyin, fullWord, fullPinyin, parts, fruit, layout, fruitEmoji });
+
+export const levels: Level[] = [
+  {
+    id: 'orchard',
+    name: '汉字果园',
+    icon: '🍑',
+    description: '看偏旁，拼汉字',
+    questions: [
+      q('桃', 'táo', '桃子', 'táo zi', ['木', '兆'], '🍑', 'horizontal'),
+      q('梨', 'lí', '梨子', 'lí zi', ['利', '木'], '🍐', 'vertical'),
+      q('苹', 'píng', '苹果', 'píng guǒ', ['艹', '平'], '🍎', 'vertical'),
+      q('芒', 'máng', '芒果', 'máng guǒ', ['艹', '亡'], '🥭', 'vertical'),
+      q('柠', 'níng', '柠檬', 'níng méng', ['木', '宁'], '🍋', 'horizontal'),
+      q('橙', 'chéng', '橙子', 'chéng zi', ['木', '登'], '🍊', 'horizontal'),
+      q('柿', 'shì', '柿子', 'shì zi', ['木', '市'], '🍅', 'horizontal'),
+      q('葡', 'pú', '葡萄', 'pú táo', ['艹', '匍'], '🍇', 'vertical'),
+      q('樱', 'yīng', '樱桃', 'yīng táo', ['木', '婴'], '🍒', 'horizontal'),
+      q('蕉', 'jiāo', '香蕉', 'xiāng jiāo', ['艹', '焦'], '🍌', 'vertical'),
+    ],
+  },
+  {
+    id: 'garden',
+    name: '四季菜园',
+    icon: '🌱',
+    description: '蔬菜破土长出来',
+    questions: [
+      q('茄', 'qié', '茄子', 'qié zi', ['艹', '加'], '茄子.png', 'vertical', '🍆'),
+      q('椒', 'jiāo', '辣椒', 'là jiāo', ['木', '叔'], '辣椒.png', 'horizontal', '🌶️'),
+      q('菇', 'gū', '蘑菇', 'mó gu', ['艹', '姑'], '蘑菇.png', 'vertical', '🍄'),
+      q('番', 'fān', '番茄', 'fān qié', ['釆', '田'], '番茄.png', 'vertical', '🍅'),
+      q('萝', 'luó', '萝卜', 'luó bo', ['艹', '罗'], '胡罗卜.png', 'vertical', '🥕'),
+      q('苗', 'miáo', '豆苗', 'dòu miáo', ['艹', '田'], '豆苗.png', 'vertical', '🌱'),
+      q('蒜', 'suàn', '大蒜', 'dà suàn', ['艹', '示'], '大蒜.png', 'vertical', '🧄'),
+      q('菜', 'cài', '白菜', 'bái cài', ['艹', '采'], '白菜.png', 'vertical', '🥬'),
+    ],
+  },
+  {
+    id: 'classroom',
+    name: '学习教室',
+    icon: '✏️',
+    description: '学习用品拼一拼',
+    questions: [
+      q('笔', 'bǐ', '铅笔', 'qiān bǐ', ['竹', '毛'], '✏️', 'vertical'),
+      q('课', 'kè', '课本', 'kè běn', ['讠', '果'], '📚', 'horizontal'),
+      q('灯', 'dēng', '台灯', 'tái dēng', ['火', '丁'], '💡', 'horizontal'),
+      q('包', 'bāo', '书包', 'shū bāo', ['勹', '巳'], '🎒', 'horizontal'),
+      q('讲', 'jiǎng', '讲台', 'jiǎng tái', ['讠', '井'], '🧑‍🏫', 'horizontal'),
+      q('信', 'xìn', '信封', 'xìn fēng', ['亻', '言'], '💌', 'horizontal'),
+      q('篮', 'lán', '篮球', 'lán qiú', ['竹', '监'], '🏀', 'vertical'),
+      q('粉', 'fěn', '粉笔', 'fěn bǐ', ['米', '分'], '⚪', 'horizontal'),
+    ],
+  },
+  {
+    id: 'shop',
+    name: '快乐商店',
+    icon: '🛒',
+    description: '生活物品拼一拼',
+    questions: [
+      q('奶', 'nǎi', '牛奶', 'niú nǎi', ['女', '乃'], '🥛', 'horizontal'),
+      q('冰', 'bīng', '冰块', 'bīng kuài', ['冫', '水'], '🧊', 'horizontal'),
+      q('糕', 'gāo', '蛋糕', 'dàn gāo', ['米', '羔'], '🍰', 'horizontal'),
+      q('饼', 'bǐng', '饼干', 'bǐng gān', ['饣', '并'], '🥞', 'horizontal'),
+      q('杯', 'bēi', '杯子', 'bēi zi', ['木', '不'], '🥤', 'horizontal'),
+      q('帽', 'mào', '帽子', 'mào zi', ['巾', '冒'], '🧢', 'horizontal'),
+      q('箱', 'xiāng', '纸箱', 'zhǐ xiāng', ['竹', '相'], '📦', 'vertical'),
+      q('袋', 'dài', '袋子', 'dài zi', ['代', '衣'], '🛍️', 'horizontal'),
+      q('袜', 'wà', '袜子', 'wà zi', ['衤', '末'], '🧦', 'horizontal'),
+    ],
+  },
+];

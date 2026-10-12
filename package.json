@@ -1,0 +1,12 @@
+{
+  "name": "personal-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "install:projects": "npm ci --prefix home && npm ci --prefix light && npm ci --prefix word-game && npm ci --prefix lunar-theater",
+    "dev": "npm run build && npm run preview",
+    "dev:home": "npm run dev --prefix home",
+    "build": "npm run build --prefix home && npm run build --prefix light && npm run build --prefix word-game && npm run build --prefix lunar-theater && node scripts/assemble.mjs",
+    "preview": "npm run preview --prefix home -- --outDir ../dist --host"
+  }
+}

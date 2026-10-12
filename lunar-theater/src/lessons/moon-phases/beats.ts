@@ -1,0 +1,62 @@
+import type { Beat } from '../types'
+import { DEMO_DURATION } from '../../lib/scale'
+
+export const MOON_PHASE_BEATS: Beat[] = [
+  {
+    start: 0,
+    end: 12,
+    t: 0.08,
+    camera: 'overview',
+    extra: false,
+    title: '阳光只从一侧来',
+    body: '太阳离得太远，光线几乎平行。地球和月球都被照亮一半。',
+  },
+  {
+    start: 12,
+    end: 24,
+    t: 0.12,
+    camera: 'side',
+    extra: false,
+    title: '月球永远是半明半暗',
+    body: '转到阴影边界上看。缺的那一半不是谁挡住了，是没有阳光。',
+  },
+  {
+    start: 24,
+    end: 38,
+    tFrom: 0.12,
+    tTo: 0.25,
+    camera: 'overview',
+    extra: false,
+    title: '从朔，到上弦',
+    body: '月球转到太阳和地球的一侧。从地球看，亮面一天天变多。',
+  },
+  {
+    start: 38,
+    end: 50,
+    tFrom: 0.25,
+    tTo: 0.5,
+    camera: 'overview',
+    extra: false,
+    title: '从上弦，到望',
+    body: '再转半圈，亮面正对地球。这就是满月。',
+  },
+  {
+    start: 50,
+    end: 62,
+    t: 0.5,
+    camera: 'side',
+    extra: true,
+    title: '满月不是地球的影子',
+    body: '地球影子在这里。这个月，月亮从旁边过去。',
+  },
+  {
+    start: 62,
+    end: DEMO_DURATION,
+    tFrom: 0.5,
+    tTo: 0.75,
+    camera: 'overview',
+    extra: true,
+    title: '自己转转看',
+    body: '拖动下面的日子。空间里的位置，和右上角地上看见的月相，是同一件事。',
+  },
+]

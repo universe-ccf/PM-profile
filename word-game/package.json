@@ -1,0 +1,22 @@
+{
+  "name": "word-game",
+  "version": "1.0.0",
+  "private": true,
+  "description": "汉字拼拼乐：面向低龄识字学习的互动游戏",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "check": "tsc --noEmit"
+  },
+  "keywords": ["汉字", "识字", "教育游戏"],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "pixi.js": "^8.20.1"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}
